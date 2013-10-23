@@ -1,4 +1,6 @@
 LoginSongs::Application.routes.draw do
+  resources :playlists
+
   get "sessions/new"
   root 'songs#index'
   resources :songs
