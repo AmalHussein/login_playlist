@@ -4,7 +4,7 @@ class PlaylistsController < ApplicationController
   # GET /playlists
   # GET /playlists.json
   def index
-    @playlists = Playlist.all
+    @playlists = Playlist.all.where(:state => 'public')
   end
 
   # GET /playlists/1

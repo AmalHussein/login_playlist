@@ -13,6 +13,9 @@ bar = User.create(email: 'bar@example.com', password: 'bar')
 
 country_playlist = foo.playlists.create(name: 'country', state: 'public')
 country_playlist.songs << golden
+
+rock_playlist = foo.playlists.create(name: 'rock', state: 'private')
+rock_playlist.songs << ended << foxy
 # foo.songs << golden
 # foo.save!
 
