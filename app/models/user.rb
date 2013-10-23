@@ -24,6 +24,7 @@ class User < ActiveRecord::Base
   validates_presence_of :email
   validates_uniqueness_of :email
 
+  has_many :playlists
   #def active_songs 
   #  self.songs.merge(SongCollection.active)
   #end    

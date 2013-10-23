@@ -11,7 +11,8 @@ golden = Song.create(name: 'Golden Age', description: "The artist is Beck", url:
 foo = User.create(email: 'foo@example.com', password: 'foo')
 bar = User.create(email: 'bar@example.com', password: 'bar')
 
-# foo.songs << foxy
+country_playlist = foo.playlists.create(name: 'country', state: 'public')
+country_playlist.songs << golden
 # foo.songs << golden
 # foo.save!
 
