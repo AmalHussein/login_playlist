@@ -9,7 +9,6 @@ ended  = Song.create(name: "Cause we've ended as lovers", description: "The arti
 golden = Song.create(name: 'Golden Age', description: "The artist is Beck", url: 'http://www.youtube.com/watch?v=Y6zAT15vaFk')
 
 foo = User.create(email: 'foo@example.com', password: 'foo')
-bar = User.create(email: 'bar@example.com', password: 'bar')
 
 country_playlist = foo.playlists.create(name: 'country', state: 'public')
 country_playlist.songs << golden

@@ -13,6 +13,12 @@ Note: have to create a Playlist this will be join btw User and Songs. Each playl
 
 * merge branch into master
 
+* Create branch manage_playlist
+- Story: Manage (CRUD) my playlists
+Given I'm a user that is logged in.
+When I view playlists.
+I should be able to show, edit and delete my playlists.
+
 * create branch add_playlist
 - Story: Allow a user to create playlists
 Given I'm a user that is logged in.
@@ -27,10 +33,6 @@ Given I'm a user that is logged in.
 When I view playlists.
 I should see all my playlists. (public and private)
 
-- Story: Manage (CRUD) my playlists
-Given I'm a user that is logged in.
-When I view playlists.
-I should be able to show, edit and delete my playlists.
 
 - Story: View another user's playlists
 Given I'm a user. (logged in or not)

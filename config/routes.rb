@@ -2,7 +2,7 @@ LoginSongs::Application.routes.draw do
   resources :playlists
 
   get "sessions/new"
-  root 'songs#index'
+  root 'playlists#index'
   resources :songs
   resources :users
   resources :sessions

@@ -1,29 +1,45 @@
-<h1>Listing playlists</h1>
+<h1>My playlists</h1>
+<% if current_user %>
 
+<% if @my_playlists && !@my_playlists.empty? %>
 <table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Name</th>
-      <th>State</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Name</th>
+      <th>State</th>
+    </tr>
+  </thead>
 
-  <tbody>
-    <% @playlists.each do |playlist| %>
-      <tr>
-        <td><%= playlist.user %></td>
-        <td><%= playlist.name %></td>
-        <td><%= playlist.state %></td>
-        <td><%= link_to 'Show', playlist %></td>
-        <td><%= link_to 'Edit', edit_playlist_path(playlist) %></td>
-        <td><%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <tbody>
+    <% @my_playlists.each do |playlist| %>
+    <%= show_playlist(playlist) %>
+    <% end %>
+  </tbody>
+</table>
+<% else %>
+<h2>You currently have no playlists</h2>
+<% end %>
+<% else %>
+<h2>you need to log in to see your playlists</h2>
+<% end %>
+<br>
+
+<h1>Listing playlists</h1>
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Name</th>
+      <th>State</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @playlists.each do |playlist| %>
+    <%= show_playlist(playlist) %>
+    <% end %>
+  </tbody>
 </table>
 
 <br>
